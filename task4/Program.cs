@@ -1,12 +1,14 @@
 ﻿Console.Clear();
-Console.Write("Введите любое целое положительное число: ");
+Console.WriteLine("Введите три числа: ");
+Console.Write("Введите первое число:  ");
 int a = int.Parse(Console.ReadLine()!);
-int i = 1;
-Console.Write("Все четные числа меньше введеного: ");
-while(i <= a)
-{
-    if(i % 2 == 0)
-        Console.Write(i + " ");
-    i++;
-}
-
+Console.Write("Введите второе число:  ");
+int b = int.Parse(Console.ReadLine()!);
+Console.Write("Введите третье число:  ");
+int c = int.Parse(Console.ReadLine()!);
+int max = a;
+if (b > max) 
+    max = b;
+if (c > max)
+    max = c;
+Console.WriteLine($"Максимальное число из 3х равно: {max}");
